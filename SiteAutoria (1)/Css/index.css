@@ -1,0 +1,116 @@
+/* propriedades que todo o site deve obedecer */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+ /* estilização do corpo do site  */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../fotos/Fundo6.jfif);
+    background-size: cover;
+    background-position: right;
+}
+/* estilização de onde vai ficar os blocos (card) */
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 100px 50px;
+flex-wrap: wrap;
+padding: 100px 50x;
+}
+/* estilização de todos os blocos */
+.container .card{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,.15) ;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* a altura vai crescer quando passar o mouse sobre os blocos */
+.container .card:hover{
+    height: 400px; 
+}
+/* estilizaçao do minibloco onde vai ficar as imagens */
+.container .card .caixaimg{
+    position: absolute;
+    width: 300px;
+    height: 220px;
+    border-radius: 12px;
+    top: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+/* estilização das imagens dos blocos */
+.container .card .caixaimg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+
+}
+/* esilização do conteudo dos blocos */
+.container .card .conteudo{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: .5s;
+}
+/* quando passar o mouse sobre os blocos o conteudo vai surgir */
+.container .card:hover .conteudo{
+    top: 150px;
+    height: 250px;
+}
+/* quando passar o mouse sobre o card a imagen vai fazer uma curta animação */
+.container .card:hover .caixaimg{
+    top: -100px;
+    scale: .75;
+    box-shadow: 0 15px 45px rgba(0,0,0,.2);
+}
+/* estilização do titulos dos blocos */
+.container .card .conteudo h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+/* cor dos paragros do conteudo  */
+.container .card .conteudo p{
+    color: #333;
+}
+/* estilização dos links(botões) */
+.container .card .conteudo a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: .5s;
+
+}
+/* quando passar o mouse sobre o botão(Link) a cor vai mudar  */
+.container .card .conteudo a:hover{
+    background-color: #040305;
+    transition: .5s;
+
+}
+
+
